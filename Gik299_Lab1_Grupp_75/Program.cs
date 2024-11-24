@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System;
+using System.Net.NetworkInformation;
 
 internal class Program
 {
@@ -14,6 +15,8 @@ internal class Program
         // Ankomst
         int nyToSthlmHours = 10;
         int nyToSthlmMinutes = 10;
+        
+        
         
         int timeDifference = 6;
 
@@ -31,6 +34,7 @@ internal class Program
             Console.WriteLine("3. Avsluta programmet");
             Console.Write("Skriv ditt val här: ");
             string input = Console.ReadLine();
+            
 
             if (int.TryParse(input, out int userChoice))
             {
@@ -38,7 +42,7 @@ internal class Program
                 {
                     Console.Clear();
                     Console.WriteLine("*************************************************************************");
-                    Console.WriteLine("\nAvgångstid från Stockholm: 14:03");
+                    Console.WriteLine("\nAvgångstid från Stockholm: " + sthlmToNyHours + ":" + sthlmToNyMinutes.ToString("00"));
                     Console.WriteLine("Ankomsttid till New York: " + (sthlmToNyHours + timeHours - timeDifference) + ":" + (sthlmToNyMinutes + timeMinutes));
                     Console.WriteLine("\n*************************************************************************");
                     isRunning = false;
@@ -48,7 +52,7 @@ internal class Program
                 {
                     Console.Clear();
                     Console.WriteLine("*************************************************************************");
-                    Console.WriteLine("\nAvgångstid från New York: 10:10");
+                    Console.WriteLine("\nAvgångstid från New York: " + nyToSthlmHours + ":" + nyToSthlmMinutes.ToString("00"));
                     Console.WriteLine("Ankomsttid till Stockholm: " + (nyToSthlmHours + timeHours + timeDifference) + ":" + (nyToSthlmMinutes + timeMinutes));
                     Console.WriteLine("\n*************************************************************************");
                     isRunning = false;
