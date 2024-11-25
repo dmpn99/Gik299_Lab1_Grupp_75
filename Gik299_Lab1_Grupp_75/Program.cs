@@ -37,7 +37,7 @@ internal class Program
             
 
             if (int.TryParse(input, out int userChoice))
-            {3
+            {
                 if (userChoice == 1)
                 {
                     Console.Clear();
