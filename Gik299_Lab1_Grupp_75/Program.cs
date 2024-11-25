@@ -6,22 +6,23 @@ internal class Program
 {
     public static void Main(string[] args)
     {
+
+        // Vi deklarerar och initierar variabler för att kunna räkna på flygtider och tidsskillnader.
         // Flygtid
         int timeHours = 7;
         int timeMinutes = 25;
-        // Avresa
+        // Avresa Stockholm
         int sthlmToNyHours = 14;
         int sthlmToNyMinutes = 03;
-        // Ankomst
+        // Avresa New York
         int nyToSthlmHours = 10;
         int nyToSthlmMinutes = 10;
-        
-        
-        
+        // Tidsskillnad       
         int timeDifference = 6;
 
+        // Deklarerar och initierar en bool som villkor för while-loopen.
         bool isRunning = true;
-
+        // Skapar en while-loop till menyn vi har i programmet.
         while (isRunning)
         {
             Console.WriteLine();
