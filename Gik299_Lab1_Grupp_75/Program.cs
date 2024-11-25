@@ -28,7 +28,7 @@ internal class Program
             Console.WriteLine("*************************************************************************");
             Console.WriteLine();
             Console.WriteLine("Välkommen till flygtidsberäknaren!");
-            Console.WriteLine("\nVilket flyg vill du se detaljerad information om? (svara med en siffra)");
+            Console.WriteLine("\nVilket flyg vill du se detaljerad information om? (svara med siffra)");
             Console.WriteLine("1. Stockholm - New York");
             Console.WriteLine("2. New York - Stockholm");
             Console.WriteLine("3. Avsluta programmet");
@@ -37,7 +37,7 @@ internal class Program
             
 
             if (int.TryParse(input, out int userChoice))
-            {
+            {3
                 if (userChoice == 1)
                 {
                     Console.Clear();
