@@ -80,7 +80,7 @@ internal class Program
                     Visar utskrift i 1.2 sek innan konsollen rensas
                     */
                     Console.WriteLine("\nOgiltig inmatning, välj mellan alternativ 1-3!");
-                    Thread.Sleep(1200);
+                    Thread.Sleep(1500);
                     Console.Clear();
                 }
             }
@@ -88,7 +88,7 @@ internal class Program
             {
                 // Lika som else ovanför, felhantering.
                 Console.WriteLine("\nOgiltig inmatning, välj mellan alternativ 1-3!");
-                Thread.Sleep(1200);
+                Thread.Sleep(1500);
                 Console.Clear();
             }  
         }
