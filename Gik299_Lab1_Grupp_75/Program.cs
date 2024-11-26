@@ -11,10 +11,10 @@ internal class Program
         // Flygtid
         int timeHours = 7;
         int timeMinutes = 25;
-        // Avresa Stockholm
+        // Avresa från Stockholm
         int sthlmToNyHours = 14;
         int sthlmToNyMinutes = 03;
-        // Avresa New York
+        // Avresa från New York
         int nyToSthlmHours = 10;
         int nyToSthlmMinutes = 10;
         // Tidsskillnad       
