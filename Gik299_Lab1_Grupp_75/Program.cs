@@ -36,20 +36,25 @@ internal class Program
             Console.Write("Skriv ditt val här: ");
             string input = Console.ReadLine();
             
-
+            /* 
+            Använder metoden TryParse för att dels konvertera variabeln "input" till en int ("userChoice"),
+            men också för att använda den som ett villkor (bool - true/false) i if-satsen. Det är felhantering.
+            */ 
             if (int.TryParse(input, out int userChoice))
             {
                 if (userChoice == 1)
                 {
+                    // Använder metoden Clear för att rensa konsolfönstret. För snyggare utskrift.
                     Console.Clear();
+                    // Skriver ut till användaren. Räknar och använder formateringsmetoden ToString.
                     Console.WriteLine("*************************************************************************");
                     Console.WriteLine("\nAvgångstid från Stockholm: " + sthlmToNyHours + ":" + sthlmToNyMinutes.ToString("00"));
                     Console.WriteLine("Ankomsttid till New York: " + (sthlmToNyHours + timeHours - timeDifference) + ":" + (sthlmToNyMinutes + timeMinutes));
                     Console.WriteLine("\n*************************************************************************");
+                    // Tilldelelar boolen isRunning false för att bryta loopen = avsluta programmet.
                     isRunning = false;
                 }
-                else if (userChoice == 2)
-                    
+                else if (userChoice == 2)                    
                 {
                     Console.Clear();
                     Console.WriteLine("*************************************************************************");
@@ -60,6 +65,7 @@ internal class Program
                 }
                 else if (userChoice == 3)
                 {
+                    // Om användaren väljer att avsluta programmet. 
                     Console.Clear();
                     Console.WriteLine("*************************************************************************");
                     Console.WriteLine("\nDu har valt att avsluta programmet");
@@ -68,15 +74,23 @@ internal class Program
                 }
                 else
                 {
-                    
+                    /*
+                    Felhantering. Användaren har skrivit in fel siffra.
+                    Loopas tillbaka till menyn.
+                    Visar utskrift i 1.2 sek innan konsollen rensas
+                    */
                     Console.WriteLine("\nOgiltig inmatning, välj mellan alternativ 1-3!");
+                    Thread.Sleep(1200);
+                    Console.Clear();
                 }
             }
             else
             {
-                
+                // Lika som else ovanför, felhantering.
                 Console.WriteLine("\nOgiltig inmatning, välj mellan alternativ 1-3!");
-            }
+                Thread.Sleep(1200);
+                Console.Clear();
+            }  
         }
     }
 }
