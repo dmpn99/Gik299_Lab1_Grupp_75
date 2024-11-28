@@ -58,7 +58,7 @@ internal class Program
                 {
                     Console.Clear();
                     Console.WriteLine("*************************************************************************");
-                    Console.WriteLine("\nAvgångstid från New York: " + nyToSthlmHours + ":" + nyToSthlmMinutes.ToString("00"));
+                    Console.WriteLine("\nAvgångstid från New York: " + nyToSthlmHours + ":" + nyToSthlmMinutes);
                     Console.WriteLine("Ankomsttid till Stockholm: " + (nyToSthlmHours + timeHours + timeDifference) + ":" + (nyToSthlmMinutes + timeMinutes));
                     Console.WriteLine("\n*************************************************************************");
                     isRunning = false;
@@ -77,7 +77,7 @@ internal class Program
                     /*
                     Felhantering. Användaren har skrivit in fel siffra.
                     Loopas tillbaka till menyn.
-                    Visar utskrift i 1.2 sek innan konsollen rensas
+                    Visar utskrift i 1.5 sek innan konsollen rensas
                     */
                     Console.WriteLine("\nOgiltig inmatning, välj mellan alternativ 1-3!");
                     Thread.Sleep(1500);
