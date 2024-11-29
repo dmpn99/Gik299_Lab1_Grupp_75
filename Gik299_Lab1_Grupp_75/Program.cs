@@ -22,7 +22,7 @@ internal class Program
 
         // Deklarerar och initierar en bool som villkor för while-loopen.
         bool isRunning = true;
-        // Skapar en while-loop till menyn vi har i programmet.
+        // Skapar en while-loop till den meny vi har i programmet.
         while (isRunning)
         {
             Console.WriteLine();
